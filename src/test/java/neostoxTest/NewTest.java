@@ -17,6 +17,7 @@ import org.testng.annotations.BeforeClass;
 import java.io.IOException;
 
 import org.testng.Assert;
+import org.testng.Reporter;
 import org.testng.annotations.AfterClass;
 
 @Listeners(listenerClass.Listener.class)
@@ -36,6 +37,7 @@ public class NewTest extends  LaunchBrowser
 	  s1.waituse(driver,1000);
 	  String username = home.username();
 	  Assert.assertEquals(username,ExtractdatafromProperties.properties("exceptedusername"));
+	  Reporter.log("validate userid");
   }
   @BeforeMethod
   public void beforeMethod() throws IOException, InterruptedException 

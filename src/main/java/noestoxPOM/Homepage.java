@@ -13,6 +13,10 @@ public class Homepage
 	public Homepage(WebDriver driver) {
 		PageFactory.initElements(driver,this);
 	}
+	
+	
+	
+	
 	public String username()
 	{
 		String username=exceptedUID.getText();
